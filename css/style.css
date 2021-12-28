@@ -26,4 +26,93 @@ body {
     url(../img/hero.jpg);
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; /* Just to make the little shaky screen in animations go away*/
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation: easeinout 1s;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17px;
+  animation: easeinright 1s;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding: 15px;
+  background: #fff;
+  border-radius: 30px;
+  margin-top: 25px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.438);
+}
+
+.btn:active {
+  transform: translateY(5px);
+}
+
+@keyframes easeinout {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes easeinright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
