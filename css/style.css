@@ -7,17 +7,29 @@ Dark green: #28b485
 
 */
 
-* {
+/* Best Practice */
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+/* Overiding the default font size which is 16px to it's 62.5% which is 10px so we can just divide px by 10
+and assign it in rem */
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -29,17 +41,20 @@ body {
   position: relative;
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
-.logo {
-  height: 35px;
+.header__logo {
+  height: 3.5rem;
 }
 
-.text-box {
+/* Using position absolute does not disturb the surroundings and using top bottom left or right we can position
+the element in the relative positioned element */
+
+.header__text-box {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,19 +67,19 @@ body {
   backface-visibility: hidden; /* Just to make the little shaky screen in animations go away*/
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
   animation: easeinout 1s;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 17px;
+  letter-spacing: 1.7rem;
   animation: easeinright 1s;
 }
 
@@ -77,42 +92,47 @@ a {
   display: block;
   margin: 0 auto;
   width: 50%;
-  padding: 15px;
-  background: #fff;
-  border-radius: 30px;
-  margin-top: 25px;
-  letter-spacing: 2px;
+  padding: 1.5rem;
   color: rgba(0, 0, 0, 0.438);
+  transition: all 0.3s;
+  font-size: 1.6rem;
+}
+
+.btn--white {
+  background: #fff;
+  border-radius: 3rem;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
 }
 
 .btn:active {
-  transform: translateY(5px);
+  transform: translateY(0.5rem);
 }
 
 @keyframes easeinout {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(20px);
+    transform: translateX(2rem);
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0rem);
   }
 }
 
 @keyframes easeinright {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-20px);
+    transform: translateX(-2rem);
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0rem);
   }
 }
