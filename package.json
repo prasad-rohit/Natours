@@ -1,0 +1,23 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "A static website for a tour and travel company which is based mostly on natural tours and travel packages.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prasad-rohit/Natours.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prasad-rohit/Natours/issues"
+  },
+  "homepage": "https://github.com/prasad-rohit/Natours#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
